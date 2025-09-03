@@ -69,7 +69,7 @@ const Navbar = () => {
               sx={{
                 mr: 2,
                 display: { sm: "none" },
-                color: "black",
+                color: "white",
               }}
               aria-label="open drawer"
               edge="start"
@@ -90,7 +90,7 @@ const Navbar = () => {
                   alt="Logo"
                   width={120} // adjust width as needed
                   height={50} // adjust height as needed
-                  className="pl-10 py-2"
+                  className=" py-2"
                 />
               </Link>
             </Typography>
