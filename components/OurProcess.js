@@ -112,7 +112,7 @@ const OurProcess = ({
                     {process.map((p, index) => (
                         <motion.div
                             key={index}
-                            className="bg-[#eaeefe] rounded-2xl py-5  px-6 w-full max-w-[300px] duration-300 border border-gray-100"
+                            className="bg-[#eaeefe] rounded-2xl py-5  px-6 w-full max-w-[350px] duration-300 border border-gray-100"
                             variants={cardVariants}
                             whileHover={cardHover}
                             custom={index}
