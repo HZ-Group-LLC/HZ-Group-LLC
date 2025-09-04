@@ -1,17 +1,31 @@
 "use client"
 
 import React, { useState } from 'react';
-// import { Slide } from '../../components/Slide';
+import { motion } from 'framer-motion';
 import { Alert, Snackbar } from '@mui/material';
 import Contact from '@/components/Contact';
 import ContactBanner from '@/components/ContactBanner';
 import Hero from '@/components/Hero';
 
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
 const ContactUs = () => {
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: '',
-    severity: 'success', // 'success' | 'error' | 'warning' | 'info'
+    severity: 'success', 
   });
 
   const onSubmit = async (event) => {
@@ -44,7 +58,7 @@ const ContactUs = () => {
           message: 'Form submitted successfully',
           severity: 'success',
         });
-        event.target.reset(); // clear form
+        event.target.reset(); 
       } else {
         setSnackbar({
           open: true,
@@ -74,6 +88,23 @@ const ContactUs = () => {
         buttonText="Get in Touch"
         buttonLink="/contactus"
       />
+     <motion.div
+          className="text-center mt-10 -mb-5"
+          variants={textVariants}
+        >
+          <motion.h2
+            className="title text-gray-800 mb-2 sm:mb-3 lg:mb-4"
+            variants={textVariants}
+          >
+            Contact Us
+          </motion.h2>
+          <motion.p
+            className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide"
+            variants={textVariants}
+          >
+            Your Next Step Starts Here
+          </motion.p>
+        </motion.div>
       <Contact onSubmit={onSubmit} />
       <Snackbar
         open={snackbar.open}

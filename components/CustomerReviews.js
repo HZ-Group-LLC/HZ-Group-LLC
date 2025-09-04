@@ -128,7 +128,7 @@ const CustomerReviews = ({
                     className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide"
                     variants={textVariants}
                 >
-                    Words from our satisfied clients: Hear what they have to say about our services.
+                    Words from our satisfied clients: Hear what they have to say about our services
                 </motion.p>
             </motion.div>
 

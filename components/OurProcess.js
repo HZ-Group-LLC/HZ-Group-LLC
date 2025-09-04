@@ -77,20 +77,6 @@ const OurProcess = ({
         }
     };
 
-    const starVariants = {
-        hidden: {
-            opacity: 0,
-            scale: 0
-        },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut"
-            }
-        }
-    };
 
     return (
         <motion.div
@@ -114,7 +100,7 @@ const OurProcess = ({
                     className="subtitle text-xs sm:text-sm md:text-base text-gray-600 tracking-wide"
                     variants={textVariants}
                 >
-                    Transforming ideas into exceptional software solutions through innovation and expertise..
+                    Transforming ideas into exceptional software solutions through innovation and expertise
                 </motion.p>
             </motion.div>
 
