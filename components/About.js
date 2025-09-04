@@ -36,7 +36,7 @@ const textVariants = {
 const About = () => {
  
   return (
-    <div className="my-20 bg-slate-100 py-10 flex flex-col justify-center items-center">
+    <div className=" bg-slate-100 py-10 flex flex-col justify-center items-center">
         <div className="max-w-7xl">
       <motion.div
         className="flex w-full mt-20 flex-col justify-center items-center"
@@ -89,18 +89,18 @@ const About = () => {
               <Button
                 variant="contained"
                 // endIcon={<ArrowForwardIcon />}
-                sx={{
-                  backgroundColor: '#0273cc',
-                  color: '#fff',
-                  fontWeight: 'bold',
-                  textTransform: 'uppercase',
-                  px: 4,
-                  py: 1.5,
-                  borderRadius: 999,
-                  '&:hover': {
-                    backgroundColor: '#2c72b5',
-                  },
-                }}
+               sx={{
+                            backgroundColor: "#001E80",
+                            color: "#fff",
+                            fontWeight: "bold",
+                            textTransform: "uppercase",
+                            px: 4,
+                            py: 1.5,
+                            borderRadius: 999,
+                            "&:hover": {
+                                backgroundColor: "rgb(14,52,178)",
+                            },
+                        }}
               >
                 Explore More
               </Button>

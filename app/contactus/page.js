@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { Alert, Snackbar } from '@mui/material';
 import Contact from '@/components/Contact';
 import ContactBanner from '@/components/ContactBanner';
+import Hero from '@/components/Hero';
 
 const ContactUs = () => {
   const [snackbar, setSnackbar] = useState({
@@ -67,15 +68,12 @@ const ContactUs = () => {
 
   return (
     <>
-
-      {/* <Slide
-        image='contact_rdktj3'
-        heading="Contact Us"
-        subheading="We're here to assist you"
-        description="Have questions or need support? Reach out to us for any inquiries or assistance. Our team is dedicated to providing you with the best service and support."
-        buttonText="Contact Us"
-        link="/contact-us"
-      /> */}
+      <Hero
+        title="Contact Us"
+        description="Ready to take the next step? Get in touch with HZ Group LLC today and discover how our technology expertise can help your business scale and innovate. Our team is here to answer your questions, provide guidance, and craft solutions aligned with your goals."
+        buttonText="Get in Touch"
+        buttonLink="/contactus"
+      />
       <Contact onSubmit={onSubmit} />
       <Snackbar
         open={snackbar.open}

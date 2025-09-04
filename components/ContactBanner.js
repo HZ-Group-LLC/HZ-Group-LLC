@@ -70,7 +70,7 @@ const ContactBanner = () => {
                     <Button
                         variant="contained"
                         sx={{
-                            backgroundColor: "#0273cc",
+                            backgroundColor: "#001E80",
                             color: "#fff",
                             fontWeight: "bold",
                             textTransform: "uppercase",
@@ -78,7 +78,7 @@ const ContactBanner = () => {
                             py: 1.5,
                             borderRadius: 999,
                             "&:hover": {
-                                backgroundColor: "#2c72b5",
+                                backgroundColor: "rgb(14,52,178)",
                             },
                         }}
                     >

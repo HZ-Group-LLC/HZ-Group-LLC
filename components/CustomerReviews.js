@@ -3,18 +3,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from '@mui/icons-material';
+import Image from 'next/image';
 
 const CustomerReviews = ({
     testimonials = [
         {
             text: "Working with HZ Group has been an absolute pleasure. They understood our requirements perfectly and delivered a top-notch software solution within the agreed timeline. Their team was highly professional, responsive, and attentive to our needs. We highly recommend their services.",
             author: "William Doe",
-            rating: 5
+            rating: 5,
+            avatar: "/images/avatar-1.png"
         },
         {
             text: "We approached HZ Group with a complex project, and they exceeded our expectations. Their technical expertise and attention to detail were impressive. They provided valuable insights and suggestions throughout the development process, resulting in a robust and user-friendly software solution.",
             author: "Jon Jones",
-            rating: 5
+            rating: 5,
+            avatar: "/images/avatar-2.png"
         },
 
     ]
@@ -86,6 +89,23 @@ const CustomerReviews = ({
         }
     };
 
+    const avatarVariants = {
+        hidden: {
+            opacity: 0,
+            scale: 0.8,
+            rotate: -10
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <motion.div
             className="container !my-10 w-full py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8"
@@ -120,7 +140,7 @@ const CustomerReviews = ({
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white rounded-2xl p-6 sm:py-8 sm:px-10 w-full max-w-[500px] duration-300 border border-gray-100"
+                            className="bg-[#eaeefe] rounded-2xl p-6 sm:py-8 sm:px-10 w-full max-w-[500px] duration-300 border border-gray-100"
                             variants={cardVariants}
                             whileHover={cardHover}
                             custom={index}
@@ -159,7 +179,7 @@ const CustomerReviews = ({
                                 {testimonial.text}
                             </motion.p>
 
-                            {/* Author with Star Icon */}
+                            {/* Author with Avatar */}
                             <motion.div
                                 className="flex items-center"
                                 initial={{ opacity: 0, y: 20 }}
@@ -167,6 +187,22 @@ const CustomerReviews = ({
                                 transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                                 viewport={{ once: true }}
                             >
+                                <motion.div
+                                    className="mr-2"
+                                    variants={avatarVariants}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    transition={{ delay: 0.7 + index * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Image
+                                        src={testimonial.avatar}
+                                        alt={`${testimonial.author} avatar`}
+                                        width={40}
+                                        height={40}
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-gray-200 shadow-sm"
+                                    />
+                                </motion.div>
                                 <motion.div
                                     className="text-sm sm:text-base font-bold text-[#023f82]"
                                 >

@@ -126,7 +126,7 @@ const OurProcess = ({
                     {process.map((p, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white rounded-2xl py-5  px-6 w-full max-w-[300px] duration-300 border border-gray-100"
+                            className="bg-[#eaeefe] rounded-2xl py-5  px-6 w-full max-w-[300px] duration-300 border border-gray-100"
                             variants={cardVariants}
                             whileHover={cardHover}
                             custom={index}
@@ -150,7 +150,7 @@ const OurProcess = ({
 
                             {/* Review Text */}
                             <motion.p
-                                className="text-sm sm:text-lg font-semibold text-[#0273cc] leading-relaxed mb-6 text-left"
+                                className="text-sm sm:text-lg font-semibold text-[#001E80] leading-relaxed mb-6 text-left"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}

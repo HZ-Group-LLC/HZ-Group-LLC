@@ -19,14 +19,18 @@ const Contact = ({ onSubmit }) => {
   return (
     <div className="px-4 py-16 lg:px-12 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto gap-12 items-stretch">
-
-
         {/* Right Side - Contact Form */}
         <div className="bg-white rounded-2xl shadow p-8 flex flex-col justify-between h-full">
           <div>
-            <h3 className="subtitle !text-[#0273cc] mb-4">We'd love to hear from you</h3>
-            <p className=" mb-8">Have a question or want to plan a trip? Fill out the form and we’ll get back to you soon.</p>
+            <h3 className="subtitle !text-[#0273cc] mb-4">
+              We’d love to hear from you
+            </h3>
+            <p className="mb-8">
+              Have a question about our services or want to discuss your next project?
+              Fill out the form and our team will get back to you shortly.
+            </p>
           </div>
+
           <form onSubmit={onSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name*</label>
@@ -71,7 +75,7 @@ const Contact = ({ onSubmit }) => {
 
             <button
               type="submit"
-              className="w-full bg-[#0273cc] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 cursor-pointer transform transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full bg-[#001E80] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 cursor-pointer transform transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               SEND MESSAGE
             </button>

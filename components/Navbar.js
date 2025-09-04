@@ -38,9 +38,17 @@ const Navbar = () => {
         component="div"
         sx={{ flexGrow: 1, my: 2, fontWeight: "bold", textAlign: "center" }}
       >
-        {/* logo here */}
+        <Link href="/">
+                <Image
+                  src="/images/logo.png" // path inside public folder
+                  alt="Logo"
+                  width={120} // adjust width as needed
+                  height={50} // adjust height as needed
+                  className=" py-2"
+                />
+              </Link>
       </Typography>
-      <Divider sx={{ mb: 2 }} />
+
       <ul className="mobile-navigation">
         {navItems.map((item) => (
           <li key={item.href}>
@@ -62,14 +70,15 @@ const Navbar = () => {
       <Box>
         <AppBar
           component="nav"
-          sx={{ bgcolor: "#0273cc", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}
+          sx={{ bgcolor: "#eaeefe", }}
+          elevation={0}
         >
           <Toolbar>
             <IconButton
               sx={{
                 mr: 2,
                 display: { sm: "none" },
-                color: "white",
+                color: "#001E80",
               }}
               aria-label="open drawer"
               edge="start"
@@ -118,11 +127,11 @@ const Navbar = () => {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             sx={{
-              display: { xs: "block", sm: "none", bgcolor: "#0273cc" },
+              display: { xs: "block", sm: "none", bgcolor: "#eaeefe" },
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: 240,
-                bgcolor: "#0273cc",
+                bgcolor: "#eaeefe",
               },
             }}
           >

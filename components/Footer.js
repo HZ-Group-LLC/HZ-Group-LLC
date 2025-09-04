@@ -35,19 +35,19 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/contactus"
+                href="/services"
                 className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
               >
-                Contact
+                Services
                 <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             </li>
             <li>
               <Link
-                href="/services"
+                href="/contactus"
                 className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
               >
-                Services
+                Contact
                 <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             </li>
@@ -150,7 +150,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="mt-10 text-center">
         <p className="text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} ARJ Travel & Tours - All rights reserved.
+          &copy; {new Date().getFullYear()} HZ Group LLC - All rights reserved.
         </p>
       </div>
     </footer>
