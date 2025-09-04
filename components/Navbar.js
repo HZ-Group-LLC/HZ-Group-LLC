@@ -99,7 +99,7 @@ const Navbar = () => {
                   alt="Logo"
                   width={120} // adjust width as needed
                   height={50} // adjust height as needed
-                  className=" py-2"
+                  className=" py-2 -ml-7 sm:ml-0"
                 />
               </Link>
             </Typography>

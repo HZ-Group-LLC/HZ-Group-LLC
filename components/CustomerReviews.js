@@ -9,7 +9,7 @@ const CustomerReviews = ({
     testimonials = [
         {
             text: "Working with HZ Group has been an absolute pleasure. They understood our requirements perfectly and delivered a top-notch software solution within the agreed timeline. Their team was highly professional, responsive, and attentive to our needs. We highly recommend their services.",
-            author: "William Doe",
+            author: "Sara William",
             rating: 5,
             avatar: "/images/avatar-1.png"
         },
@@ -108,7 +108,7 @@ const CustomerReviews = ({
 
     return (
         <motion.div
-            className="container !my-10 w-full py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

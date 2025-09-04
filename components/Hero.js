@@ -15,7 +15,7 @@ const Hero = ({ title, description, buttonText, buttonLink = "/", showButton = t
           <div className='lg:w-[600px] md:w-[470px]'>
             {/* <div className='text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight'>Version 2.0 is here</div> */}
             <h1 className='text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#0e34b2] text-transparent bg-clip-text mt-6'>{title}</h1>
-            <p className='text-xl text-[#001E80] tracking-tight mt-6'>
+            <p className='md:text-xl text-md text-[#001E80] tracking-tight mt-6'>
               {description}
             </p>
             {showButton && <div className='flex gap-1 items-center mt-[30px]'>

@@ -94,7 +94,7 @@ const OurProcess = ({
 
     return (
         <motion.div
-            className="container !my-10 w-full py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8"
+            className="max-w-7xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
