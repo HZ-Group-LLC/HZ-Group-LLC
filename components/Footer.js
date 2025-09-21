@@ -6,142 +6,111 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 py-8 px-4 md:px-16 shadow-lg">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-black text-gray-300 py-10 px-4 md:px-16 shadow-lg">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
         {/* Quick Links */}
-        <div className="space-y-4">
-          <h2 className="text-md md:text-sm pl-4 py-4 lg:text-md font-semibold text-white">
+        <div>
+          <h2 className="text-md md:text-sm py-2 font-semibold text-white border-b border-gray-700 mb-4">
             Quick Links
           </h2>
-          <ul className="grid gap-2 pt-2 text-md md:text-sm lg:text-md">
+          <ul className="space-y-2 text-md md:text-sm">
             <li>
-              <Link
-                href="/"
-                className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
-              >
-                Home
-                <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
+              <Link href="/" className="hover:text-[#023f82] transition-colors">Home</Link>
             </li>
             <li>
-              <Link
-                href="/about"
-                className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
-              >
-                About Us
-                <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
+              <Link href="/about" className="hover:text-[#023f82] transition-colors">About Us</Link>
             </li>
             <li>
-              <Link
-                href="/services"
-                className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
-              >
-                Services
-                <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
+              <Link href="/services" className="hover:text-[#023f82] transition-colors">Services</Link>
             </li>
             <li>
-              <Link
-                href="/contactus"
-                className="relative group inline-block py-1 px-2 transition duration-300 ease-in-out"
-              >
-                Contact
-                <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-[#023f82] scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
-              </Link>
+              <Link href="/contactus" className="hover:text-[#023f82] transition-colors">Contact</Link>
             </li>
           </ul>
         </div>
 
-        {/* Store Address */}
-        <div className="space-y-4">
-          <h2 className="text-md md:text-sm py-4 lg:text-md font-semibold text-white">
-            Our Location
+        {/* Pakistan Address */}
+        <div>
+          <h2 className="text-md md:text-sm py-2 font-semibold text-white flex items-center gap-2 border-b border-gray-700 mb-4">
+            <span role="img" aria-label="Pakistan" className="inline-block align-middle mr-2">🇵🇰</span>
+            Pakistan Office
           </h2>
-          <div className="text-md pt-2 md:text-sm lg:text-md">
-            <address className="not-italic">
-              87-C, 11th Commercial Street,
+          <div className="bg-gradient-to-br from-[#181818] via-[#232323] to-[#1a3c2b] rounded-2xl p-6 shadow-lg flex flex-col justify-between min-h-[220px]">
+            <address className="not-italic text-sm leading-relaxed mb-4">
+              <span className="font-semibold text-[#23a455]">Address:</span>
               <br />
-              Suite 2/2, Phase II Extension,
-              <br />
-              DHA, Karachi-Pakistan
-              <br />
-              <div className="mt-2 space-y-1">
-                <div>
-                  <a href="tel:+922135804268" className="hover:text-[#023f82] transition-colors">
-                    +9221-35804268
-                  </a>
-                </div>
-                <div>
-                  <a href="tel:+922135894268" className="hover:text-[#023f82] transition-colors">
-                    +9221-35894268
-                  </a>
-                </div>
-                <div>
-                  <a href="tel:+922137220480" className="hover:text-[#023f82] transition-colors">
-                    +9221-37220480
-                  </a>
-                </div>
-                <div>
-                  <a href="https://wa.me/923333204268" className="hover:text-[#023f82] transition-colors" target="_blank" rel="noopener noreferrer">
-                    +92-333-3204268
-                  </a>
-                </div>
-              </div>
+              87-C, 11th Commercial Street, Suite 2/2,<br />
+              Phase II Extension, DHA,<br />
+              Karachi, Pakistan, 75500
             </address>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <Image src="/svg/phone.svg" alt="Phone" width={20} height={20} />
+                <a href="tel:+923353316418" className="hover:text-[#23a455] transition-colors text-sm font-medium">
+                  +92 335 3316418
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Image src="/svg/phone.svg" alt="Phone" width={20} height={20} />
+                <a href="tel:+923333204268" className="hover:text-[#23a455] transition-colors text-sm font-medium">
+                  +92 333 3204268
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                <a href="https://wa.me/923333204268" className="hover:text-[#23a455] transition-colors text-sm font-medium" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: +92 333 3204268
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* USA Address */}
+        <div>
+          <h2 className="text-md md:text-sm py-2 font-semibold text-white flex items-center gap-2 border-b border-gray-700 mb-4">
+            <span role="img" aria-label="USA" className="inline-block align-middle mr-2">🇺🇸</span>
+            USA Office
+          </h2>
+          <div className="bg-gradient-to-br from-[#181818] via-[#232323] to-[#233c5a] rounded-2xl p-6 shadow-lg flex flex-col justify-between min-h-[220px]">
+            <address className="not-italic text-sm leading-relaxed mb-4">
+              <span className="font-semibold text-[#023f82]">Registered Address:</span>
+              <br />
+              7820 Donington Park Drive,<br />
+              Cumming, GA 30040, USA
+            </address>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <Image src="/svg/phone.svg" alt="Phone" width={20} height={20} />
+                <a href="tel:+19135688097" className="hover:text-[#023f82] transition-colors text-sm font-medium">
+                  +1 (913) 568-8097
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                <a href="https://wa.me/19135688097" className="hover:text-[#23a455] transition-colors text-sm font-medium" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: +1 (913) 568-8097
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Social Media Links */}
         <div>
-          <h2 className="text-md md:text-sm lg:text-md font-semibold text-white">
+          <h2 className="text-md md:text-sm py-2 font-semibold text-white border-b border-gray-700 mb-4">
             Follow Us
           </h2>
-          <div className="flex pt-2 space-x-4">
-            <a
-              href="https://www.facebook.com"
-              className="group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/svg/facebook.svg"
-                alt="Facebook"
-                width={24}
-                height={24}
-                className="transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-lg"
-              />
+          <div className="flex gap-4 pt-4 justify-center md:justify-start">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <Image src="/svg/facebook.svg" alt="Facebook" width={32} height={32} className="hover:scale-110 transition-transform" />
             </a>
-
-            <a
-              href="https://wa.me/923333204268"
-              className="group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/svg/whatsapp.svg"
-                alt="WhatsApp"
-                width={24}
-                height={24}
-                className="transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-lg"
-              />
+            <a href="https://wa.me/923333204268" target="_blank" rel="noopener noreferrer">
+              <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={32} height={32} className="hover:scale-110 transition-transform" />
             </a>
-
-            <a
-              href="https://www.instagram.com"
-              className="group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/svg/instagram.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-                className="transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-lg mt-[2px]"
-              />
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <Image src="/svg/instagram.svg" alt="Instagram" width={32} height={32} className="hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>
