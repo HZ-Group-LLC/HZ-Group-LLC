@@ -33,7 +33,7 @@ export const metadata = {
     "Corporate Trainings",
   ],
   verification: {
-    google: "N1JeJ7ujxYDZQOEy0jq3ZIixvG33wkbEwSZCQNhsobY",
+    google: "google6ede5e98a4318505.html",
   },
   authors: [{ name: "HZ Group LLC" }],
   openGraph: {
